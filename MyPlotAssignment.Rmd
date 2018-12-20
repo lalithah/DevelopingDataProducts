@@ -1,0 +1,29 @@
+---
+title: "Week 3 Assignment"
+author: "Lalitha Hariharan"
+date: "20 December 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+This is the week 3 assignment in the Developing Data Products. I have intentionally kept it simple to include just one slide with an interactive plot using Plot-ly.
+
+## Plot using Plot_ly for mtcars data
+
+```{r plot, echo=FALSE}
+
+#suppressPackageStartupMessages(library(plotly))
+suppressWarnings(suppressMessages(suppressPackageStartupMessages(library(plotly))))
+
+
+plot_ly(data = mtcars, x = ~cyl, y = ~mpg, type = "scatter", mode = "markers") %>%
+  layout(title = "MPG vs # cylinders")
+
+
+```
+
